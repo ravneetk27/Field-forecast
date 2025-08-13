@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="login text-center">
+            <h1>Crop Prediction Model</h1>
+            <form action="{{url_for('predict')}}" method="post">
+                <input type="text" name="Nitrogen" class="form-control mb-2" placeholder="Nitrogen" required="required" autocomplete="off"/>
+                <input type="text" name="Phosphorus" class="form-control mb-2" placeholder="Phosphorus" required="required" autocomplete="off"/>
+                <input type="text" name="Potassium" class="form-control mb-2" placeholder="Potassium" required="required" autocomplete="off"/>
+                <input type="text" name="Temperature" class="form-control mb-2" placeholder="Temperature" required="required" autocomplete="off"/>
+                <input type="text" name="Humidity" class="form-control mb-2" placeholder="Humidity" required="required" autocomplete="off"/>
+                <input type="text" name="pH" class="form-control mb-2" placeholder="pH" required="required" autocomplete="off"/>
+                <input type="text" name="rainfall" class="form-control mb-2" placeholder="Rainfall" required="required" autocomplete="off"/>
+                <button type="submit" class="btn btn-primary btn-block">Predict</button>
+            </form>
+            <h1 id="predicted">{{ prediction_text }}</h1>
+        </div>
+    </div>
+</body>
+</html>
