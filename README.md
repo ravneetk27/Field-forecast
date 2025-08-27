@@ -8,21 +8,6 @@ Real-time crop recommendation using a trained machine learning model.
 Built with Python, Flask, scikit-learn, HTML, CSS, and Bootstrap.
 Model trained on real agricultural data.
 
-Field-forecast/
-│
-├── app.py                  # Flask web application
-├── model.py                # Model training script
-├── model.pkl               # Trained ML model (pickle)
-├── model_columns.pkl       # Model feature columns (pickle)
-├── requirements.txt        # Python dependencies
-├── static/
-│   ├── Crop_recommendation.csv  # Dataset
-│   ├── farm.jpg                # Image asset
-│   └── style.css               # Custom styles
-├── templates/
-│   ├── farm.jpg                # (Possibly unused duplicate image)
-│   └── index.html              # Main HTML template
-
 How It Works
 1. Model Training:
 The model.py script loads the dataset, preprocesses the data, trains a Random Forest classifier, and saves the trained model and feature columns using pickle.
